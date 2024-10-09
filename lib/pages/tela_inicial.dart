@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:projetoloca/pages/cadastro_propriedades.dart';
 import 'package:projetoloca/pages/ver_propriedades.dart';
 
-
 class TelaInicial extends StatelessWidget {
 
   const TelaInicial (String s, {super.key, required String title});

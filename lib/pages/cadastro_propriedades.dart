@@ -10,7 +10,7 @@ class CadastroPropriedades extends StatelessWidget {
         
         title: const Center(
           child: Text(
-            'GeoRural',
+            'Adicionar nova propriedade',
             style: TextStyle(
               color: Colors.brown,
               fontFamily: 'Roboto',

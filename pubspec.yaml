@@ -12,6 +12,11 @@ dependencies:
     sdk: flutter
   cupertino_icons: ^1.0.8
   mobx: ^2.3.3+2
+  flutter_map: ^7.0.2
+  http: ^1.2.2
+  latlong2: ^0.9.1
+  logger: ^2.4.0
+  google_maps_flutter: ^2.9.0
 
 dev_dependencies:
   flutter_test:
