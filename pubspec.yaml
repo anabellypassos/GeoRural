@@ -25,12 +25,10 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
-
   fonts:
     - family: Roboto
       fonts:
         - asset: assets/fonts/Roboto-Black.ttf
-          
-
+        - asset: assets/fonts/Roboto-Italic.ttf
   assets:
-    - assets\img\235861.png
+    - assets/img/235861.png
