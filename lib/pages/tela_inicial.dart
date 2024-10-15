@@ -47,7 +47,7 @@ class TelaInicial extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const CadastroPropriedades(
+                    builder: (context) => CadastroPropriedades(
                       "Cadastrar",
                       title: '',
                     ),

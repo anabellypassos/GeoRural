@@ -5,13 +5,15 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 
 class MyGeoJsonMap extends StatefulWidget {
-  const MyGeoJsonMap({super.key});
+  const MyGeoJsonMap(String s, {super.key, required this.title});
+
+  final String title;
 
   @override
-  _MyGeoJsonMapState createState() => _MyGeoJsonMapState();
+  MyGeoJsonMapState createState() => MyGeoJsonMapState();
 }
 
-class _MyGeoJsonMapState extends State<MyGeoJsonMap> {
+class MyGeoJsonMapState extends State<MyGeoJsonMap> {
   List<LatLng> _geoJsonPoints = [];
 
   @override
@@ -21,13 +23,11 @@ class _MyGeoJsonMapState extends State<MyGeoJsonMap> {
   }
 
   Future<void> _loadGeoJsonData() async {
-    const url = 'https://geojson.io/#map=2/0/20'; // Substitua pela URL do seu GeoJSON
+    const url = 'https://seu-endereco-geojson.com'; // Substitua pela URL correta do GeoJSON
     final response = await http.get(Uri.parse(url));
 
     if (response.statusCode == 200) {
       final geoJsonData = json.decode(response.body);
-
-      // Processar o GeoJSON e extrair as coordenadas
       List coordinates = geoJsonData['features'][0]['geometry']['coordinates'];
       setState(() {
         _geoJsonPoints = coordinates
@@ -35,7 +35,7 @@ class _MyGeoJsonMapState extends State<MyGeoJsonMap> {
             .toList();
       });
     } else {
-      debugPrint('Erro ao carregar o GeoJSON'); // Use debugPrint ou um logger
+      debugPrint('Erro ao carregar o GeoJSON');
     }
   }
 
@@ -43,12 +43,12 @@ class _MyGeoJsonMapState extends State<MyGeoJsonMap> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Mapa GeoJSON'),
+        title: Text(widget.title),
       ),
       body: FlutterMap(
         options: MapOptions(
-         initialCenter: const LatLng(5.494, 56.952), // Definindo o centro inicial do mapa
-          initialZoom: 6.44, // Definindo o zoom inicial
+          initialCenter: const LatLng(5.494, 56.952), // Centro inicial do mapa
+          initialZoom: 6.44, // Zoom inicial do mapa
           onTap: (tapPosition, latLng) {
             // Ação ao tocar no mapa
           },

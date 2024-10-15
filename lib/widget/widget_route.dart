@@ -17,7 +17,7 @@ class _WidgetRouteState  extends State<WidgetRoute> {
   final List<Widget> _telas = [
    const TelaInicial('Início', title: '',), 
     const VerPropriedades('Propriedades', title: ''),
-    const CadastroPropriedades("Cadastrar",title: '',)
+  CadastroPropriedades("Cadastrar",title: '',)
   ];
 
   @override
