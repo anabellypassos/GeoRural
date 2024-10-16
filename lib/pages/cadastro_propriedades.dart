@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 
 class CadastroPropriedades extends StatelessWidget {
@@ -7,15 +9,23 @@ class CadastroPropriedades extends StatelessWidget {
   final formKey = GlobalKey<FormState>();
 
 // Método para a validação da obrigatoriedade do campo
-String? validateRequired(String? value) {
-  if (value == null || value.isEmpty) {
-    return 'Campo Obrigatório!';
+  String? validateRequired(String? value) {
+    if (value == null || value.isEmpty) {
+      return 'Campo Obrigatório!';
+    }
+
+    return null;
   }
-
-  return null;
+ String? validateNumber(String? value) {
+  if (value == null || value.isEmpty) {
+    return 'Esse campo deve ser preenchido com números';
+  }
+  final number = num.tryParse(value); // Tenta converter o valor em um número
+  if (number == null) {
+    return 'Por favor, insira apenas números válidos';
+  }
+  return null; // Retorna nulo se o valor for válido
 }
-
-
 
   @override
   Widget build(BuildContext context) {
@@ -50,12 +60,11 @@ String? validateRequired(String? value) {
                   ),
                 ),
                 TextFormField(
-                validator: (value) => validateRequired(value),
+                  validator: (value) => validateRequired(value),
                   decoration: const InputDecoration(
                     border: OutlineInputBorder(),
                     hintText: 'Bahia',
                   ),
-                  
                 ),
 
                 const SizedBox(height: 20),
@@ -72,12 +81,11 @@ String? validateRequired(String? value) {
                   ),
                 ),
                 TextFormField(
-               validator: (value) => validateRequired(value),
+                  validator: (value) => validateRequired(value),
                   decoration: const InputDecoration(
                     border: OutlineInputBorder(),
                     hintText: 'Salvador',
                   ),
-                 
                 ),
 
                 const SizedBox(height: 20),
@@ -94,12 +102,11 @@ String? validateRequired(String? value) {
                   ),
                 ),
                 TextFormField(
-                validator: (value) => validateRequired(value),
+                  validator: (value) => validateNumber(value),
                   decoration: const InputDecoration(
                     border: OutlineInputBorder(),
                     hintText: '12° 58\' 16"',
                   ),
-                  
                 ),
 
                 const SizedBox(height: 20),
@@ -115,13 +122,12 @@ String? validateRequired(String? value) {
                     ),
                   ),
                 ),
-                TextFormField( 
-                   validator: (value) => validateRequired(value),
+                TextFormField(
+                  validator: (value) => validateNumber(value),
                   decoration: const InputDecoration(
                     border: OutlineInputBorder(),
                     hintText: '38° 30\' 39"',
                   ),
-                 
                 ),
 
                 const SizedBox(height: 20),
