@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "937627284243",
+    "firebase_url": "https://studio-ghibli-filmes-zduuwn-default-rtdb.firebaseio.com",
+    "project_id": "studio-ghibli-filmes-zduuwn",
+    "storage_bucket": "studio-ghibli-filmes-zduuwn.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:937627284243:android:34dfa125339c8f50f260e6",
+        "android_client_info": {
+          "package_name": "com.georural.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBgpr8i4MSAA6SXqnW28cTkSey0e7AxooE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:937627284243:android:c243c0e8fad022a8f260e6",
+        "android_client_info": {
+          "package_name": "com.seuprojeto.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBgpr8i4MSAA6SXqnW28cTkSey0e7AxooE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:937627284243:android:99e517b579e3f633f260e6",
+        "android_client_info": {
+          "package_name": "com.wattenergi.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBgpr8i4MSAA6SXqnW28cTkSey0e7AxooE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
